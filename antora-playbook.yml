@@ -14,3 +14,9 @@ ui:
     snapshot: true
   supplemental_files: ./supplemental-ui
 
+extensions:
+  - path: "@djencks/antora-javadoc"
+    config:
+      extract: body
+      layout: javadoc
+

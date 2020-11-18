@@ -2,4 +2,3 @@ build
 *.iml
 .idea
 local-antora-playbook.yml
-bundle.zip
