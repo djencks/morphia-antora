@@ -2,6 +2,7 @@
   "description": "Morphia docs",
   "scripts": {
     "clean-build": "npm run clean-install;npm run build",
+    "clean-local-build": "npm run clean-install;npm run local-build",
     "clean-install": "rm -rf node_modules/ .cache/ package-lock.json ;npm i --cache=.cache/npm",
     "build": "antora --generator @djencks/site-generator-default antora-playbook.yml --stacktrace --fetch",
     "local-build": "antora --generator @djencks/site-generator-default local-antora-playbook.yml --stacktrace --fetch"
