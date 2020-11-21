@@ -1,0 +1,51 @@
+:!sectids:
+= Morphia Documentation
+
+++++
+<div class="card-row">
+++++
+
+[.column]
+====== {empty}
+[.content]
+Find the documentation, samples, and references for all things Morphia.
+
+++++
+</div>
+++++
+
+++++
+<div class="card-row two-column-row">
+++++
+
+[%header,cols=2*]
+|===
+|Morphia
+|critter
+
+|
+== *Bidirectional mapping to and from the database*
+=== Transparently map your Java entities to MongoDB documents and back.
+== *Extensible Type Conversion*
+=== Easily add support for custom types
+== *Robust Query and Update APIs*
+== *Full Aggregation Support*
+=== Use MongoDB's http://docs.mongodb.org/manual/aggregation/[aggregation framework] with your application's Java classes.
+== *Annotation driven indexing*
+== *Geospatial Queries*
+
+xref:morphia::index.adoc[Latest documentation]
+https://github.com/MorphiaOrg/morphia/[Source Code]
+| *Build time query generated helpers*
+ Check your query definitions at build time
+*Curated query and update operators*
+  Only operations that make sense for the field's type are exposed
+
+xref:critter::index.adoc[Latest documentation]
+https://github.com/MorphiaOrg/critter/[Source Code]
+
+|===
+
+++++
+</div>
+++++

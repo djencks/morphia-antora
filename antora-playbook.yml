@@ -1,12 +1,18 @@
 site:
   title: Morphia Docs
-  start_page: morphia::index.adoc
+  start_page: landing::index.adoc
 
 content:
   sources:
-    - url: https://github.com/MorphiaOrg/morphia-docs-new
-      branches: [ 2.1.x, 2.0.x, 1.6.x, master ]
-      start_path: docs
+  - url: .
+    branches: HEAD
+    start_path: home
+  - url: https://github.com/MorphiaOrg/morphia-docs-new
+    branches: [ 2.1.x, 2.0.x, 1.6.x, master ]
+    start_path: docs
+  - url: https://github.com/MorphiaOrg/critter
+    branches: [ 4.0.x ]
+    start_path: docs
 
 ui:
   bundle:
