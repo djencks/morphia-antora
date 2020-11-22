@@ -1,4 +1,10 @@
+MORPHIA_GITHUB=git@github.com:MorphiaOrg/morphia.git
 MORPHIA_DEV=2.2.0-SNAPSHOT
+GH_PAGES=gh_pages
+
+$(GH_PAGES):
+	git clone $(MORPHIA_GITHUB) -b gh-pages $(GH_PAGES)
+	touch $(GH_PAGES)
 
 local-antora-playbook.yml: antora-playbook.yml
 	@sed -e 's|https://github.com/MorphiaOrg/|../|' antora-playbook.yml > $@
@@ -8,13 +14,15 @@ package-lock.json: package.json
 
 local-site: package-lock.json local-antora-playbook.yml dev.javadoc.jar
 	@npm run local-build
+	@touch build/site/.nojekyll
 
 site: package-lock.json dev.javadoc.jar
 	@npm run build
+	@touch build/site/.nojekyll
 
-local: local-site
-
-live: site
+publish: $(GH_PAGES) site
+	cd $(GH_PAGES) ; git checkout . ; git pull --rebase
+	rsync -Crav --delete build/site/ $(GH_PAGES)/
 
 dev.javadoc.jar:
 	@mvn org.apache.maven.plugins:maven-dependency-plugin:get \
