@@ -1,4 +1,5 @@
 :!sectids:
+:page-layout: home-page
 
 ++++
 <div class="card-row ">
